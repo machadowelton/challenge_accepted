@@ -31,9 +31,6 @@ public class SwApi {
 		String reqUrl = String.format("%s%s%s", swapi, comp, planetName);
 		while(true) {
 			OkHttpClient client = new OkHttpClient.Builder()
-					.proxy(
-							new Proxy(Proxy.Type.HTTP, 
-									new InetSocketAddress("vbr008002-029.bbmapfre.corp", 80)))
 					.build();
 			Request request = new Request.Builder().url(reqUrl).build();
 			ResponseBody responseBody;
